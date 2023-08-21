@@ -5,6 +5,7 @@ metadata:
   labels:
     app: exo
   name: exo
+  namespace: demo-exo
 spec:
   replicas: 1
   selector:
