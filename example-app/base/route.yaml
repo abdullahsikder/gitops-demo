@@ -4,6 +4,7 @@ metadata:
   labels:
     app: exo
   name: exo
+  namespace: demo-exo
 spec:
   port:
     targetPort: 8080
