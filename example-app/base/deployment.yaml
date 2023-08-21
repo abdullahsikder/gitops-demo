@@ -17,6 +17,7 @@ spec:
       labels:
         app: exo
     spec:
+      serviceAccount: exo-sa
       containers:
       - image: quay.io/rhdevelopers/bgd:1.0.0
         name: exo
