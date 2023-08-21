@@ -7,20 +7,3 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
   name: exo-sa
   namespace: demo-exo
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  annotations: 
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "1"
-  creationTimestamp: null
-  name: exo-crb
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: cluster-admin
-subjects:
-- kind: ServiceAccount
-  name: exo-sa
-  namespace: demo-exo
