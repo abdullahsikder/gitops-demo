@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: demo-exo
 
 resources:
-- - serviceaccount.yaml
+- serviceaccount.yaml
 - deployment.yaml
 - svc.yaml
 - route.yaml
