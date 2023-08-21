@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: exo
+  name: exo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: exo
+    spec:
+      containers:
+      - image: quay.io/rhdevelopers/bgd:1.0.0
+        name: exo
+        env:
+        - name: ENVIRONMENT
+          value: "lab"
+        resources: {}
