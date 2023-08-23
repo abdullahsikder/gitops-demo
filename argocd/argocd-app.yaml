@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-exo
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/abdullahsikder/gitops-demo.git'
+    path: example-app/base
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated: {}
+
+
+Unable to save changes: application spec for exo-app is invalid: InvalidSpecError: Unable to generate manifests in example-app/dev: rpc error: code = Unknown desc = example-app/dev: app path does not exist
