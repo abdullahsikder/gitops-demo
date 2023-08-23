@@ -2,6 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations: 
+    argocd.argoproj.io/sync-wave: "1"
   labels:
     app: exo
   name: exo
@@ -23,6 +25,6 @@ spec:
       - image: quay.io/rhdevelopers/bgd:1.0.0
         name: exo
         env:
-        - name: ENVIRONMENT
-          value: "lab"
+        - name: COLOR
+          value: "blue"
         resources: {}
