@@ -6,12 +6,9 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/abdullahsikder/gitops-demo.git'
-    path: example-app/base
+    path: example-app/overlay/dev
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
   syncPolicy:
     automated: {}
-
-
-Unable to save changes: application spec for exo-app is invalid: InvalidSpecError: Unable to generate manifests in example-app/dev: rpc error: code = Unknown desc = example-app/dev: app path does not exist
